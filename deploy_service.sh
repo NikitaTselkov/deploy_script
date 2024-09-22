@@ -56,7 +56,7 @@ fi
 # Извлечение имени приложения и папки из пути
 APP_FOLDER=$(basename "$(dirname "$APP_PATH")")
 APP_NAME=$(basename "$APP_PATH" .dll)
-USER=$(stat -c '%U' "$APP_FOLDER")
+USER=$(stat -c '%U' "$APP_PATH")
 
 # Проверка и установка Nginx, если он не установлен
 if ! command -v nginx &> /dev/null; then
